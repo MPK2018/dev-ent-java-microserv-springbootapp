@@ -18,9 +18,11 @@ public class GreetingApplication {
             System.out.println("CommandLineRunner called.  Now, list the beans provided by Spring Boot:");
 
             String[] beanNames = ctx.getBeanDefinitionNames();
+            int counter =0;
             Arrays.sort(beanNames);
+            System.out.println("Counter ,  Bean Name");
             for (String beanName : beanNames) {
-                System.out.println(beanName);
+                System.out.printf("%8d, %s\n",++counter,beanName);
             }
         };
     }
